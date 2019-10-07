@@ -1,4 +1,5 @@
 <!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align: right"> <a class="btn btn-danger">salir</a></div> 
 <div style="text-align:center">
   <h1>
     Welcome to {{ title }}!
@@ -6,19 +7,59 @@
   <img width="100" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
 </div>
 <h2>Here are some links to help you start: </h2>
- 
- <div class="container"> 
-  <form>
-  <div>
-   <input type="text" id="usuario" name="user" placeholder="usuario" required="true">
-  </div>
-  <div>
-    <input type="password" id="clave" name="clave" placeholder="password" required="true">
-  </div>
-   <div> <button type="submit" (click)="login()">entrar</button></div>
-   <div> <button type="submit" (click)="logout()">cancelar</button></div>
-   </form>
+<div class="container"> 
+<div class="row">
+  <div class="col-5 col-md-3"> <!-- primera card -->
+  
+ <div class="card" style="width: 12rem;">
+  <div class="card-body"> 
+      <i class="material-icons md-52">create_new_folder</i>
+  <h5 class="card-title">
+    registro de entrada
+  </h5>
+  <p>Esto sirve para esto</p>
+  <a  routerlink="entrada" routerLinkActive="active" class="btn btn-info"  (click)="entrada()">pinche aqui</a>
+</div> 
+</div>
 
     </div>
+      <div class="col-5 col-md-3"><div class="card" style="width: 12rem;"> <!-- segunda card -->
+          <div class="card-body"> 
+              <i class="material-icons md-52">local_shipping</i>
+          <h5 class="card-title">
+          registro de salida
+          </h5>
+          <p> Esto sirve para esto</p>
+          <a class="btn btn-info" routerlink="salida"   (click)="salida()"> pinche aqui</a>
+        </div> 
+        </div>
+     </div>
 
+     <!-- 3ra card -->
+     <div class="col-5 col-md-3"><div class="card" style="width: 12rem;"> <!-- segunda card -->
+      <div class="card-body"> 
+          <i class="material-icons md-52">search</i>
+      <h5 class="card-title">
+        buscar info
+      </h5>
+      <p> esto sirve par esto </p>
+      <a class="btn btn-info" routerlink="consulta"  (click)="consulta()">pinche aqui</a>
+    </div> 
+    </div>
+ </div> 
+<!-- 4ta card-->
+<div class="col-5 col-md-3"><div class="card" style="width: 12rem;"> <!-- segunda card -->
+  <div class="card-body"> 
+      <i class="material-icons md-52">local_printshop</i>
+  <h5 class="card-title">
+    generar informne
+  </h5>
+  <p>esto sirve para esto </p>
+  <a class="btn btn-info" routerlink="info"   (click)="info()">pinche aqui</a>
+</div> 
+</div>
+</div> 
+
+  </div>
+  </div>
 <router-outlet></router-outlet>
