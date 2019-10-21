@@ -1,0 +1,66 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align: right"> <a class="btn btn-danger">salir</a></div> 
+<div style="text-align:center">
+  <h1>
+   Bienvenido a SGLAM
+  </h1>
+  
+  <img width="150" alt="expreso-andino Logo" src="https://ustvstaticcdn2-a.akamaihd.net/i/channel/picture/1/3/5/4/13549243/13549243_logo_expreso-01_1371046967,192x192,r:1.jpg">
+</div>
+<h2> Aquí están sus tareas: </h2>
+<div class="container"> 
+<div class="row">
+  <div class="col-5 col-md-3"> <!-- primera card -->
+  
+ <div class="card" style="width: 12rem;">
+  <div class="card-body bg-success"> 
+      <i class="material-icons md-52" style="color:blue;">create_new_folder</i>
+      <h5 class="card-title text-light">
+    Registro de entrada
+  </h5>
+  <p>Registre el ingreso de mercancía que viene del puerto</p>
+  <a  routerlink="entrada" routerLinkActive="active" class="btn btn-danger" data-toggle="tooltip" data-placement="top" title="registrar" (click)="entrada()">pinche aqui</a>
+</div> 
+</div>
+
+    </div>
+      <div class="col-5 col-md-3"><div class="card" style="width: 12rem;"> <!-- segunda card -->
+          <div class="card-body bg-success"> 
+              <i class="material-icons md-52" style="color:blue;">local_shipping</i>
+          <h5 class="card-title text-light">
+          Registro de salida
+          </h5>
+          <p> Registre una cantidad de producto para enviar al cliente</p>
+          <a class="btn btn-danger" routerlink="salida" data-toggle="tooltip" data-placement="top" title="eliminar"  (click)="salida()"> pinche aqui</a>
+        </div> 
+        </div>
+     </div>
+
+     <!-- 3ra card -->
+     <div class="col-5 col-md-3"><div class="card" style="width: 12rem;"> <!-- segunda card -->
+      <div class="card-body bg-success"> 
+          <i class="material-icons md-52" style="color:blue;">search</i>
+          <h5 class="card-title text-light">
+        Buscar Mercancía
+      </h5>
+      <p> buscar información de la mercancía guardad en el almcen y a quien le pertenece</p>
+      <a class="btn btn-danger" data-toggle="tooltip" data-placement="top" title="consultar" routerlink="consulta"  (click)="consulta()">pinche aqui</a>
+    </div> 
+    </div>
+ </div> 
+<!-- 4ta card-->
+<div class="col-5 col-md-3"><div class="card" style="width: 12rem;"> <!-- segunda card -->
+  <div class="card-body bg-success"> 
+      <i class="material-icons md-52" style="color:blue;">local_printshop</i>
+      <h5 class="card-title text-light">
+    generar Informe 
+  </h5>
+  <p>genere un archivo descargable con toda la información de la mercancía  </p>
+  <a class="btn btn-danger" routerlink="info" data-toggle="tooltip" data-placement="top" title="generar"  (click)="info()">pinche aqui</a>
+</div> 
+</div>
+</div> 
+
+  </div>
+  </div>
+<router-outlet></router-outlet>
