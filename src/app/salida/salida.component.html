@@ -1,3 +1,78 @@
-<p>
-  salida works!
-</p>
+<div class="container-fluid"> 
+  
+<form #formulario=ngForm (ngSubmit)="getMercancia(formulario)">
+<div class="form-row">
+<div class="form-group col-md-4">
+    <input type="text" class="form-control" name="_id"
+    #_id="ngModel"  [(ngModel)]=o.m._id placeholder="buscar por ID" required>
+</div>
+</div>
+<div class="form-action-row" >
+    <button type="submit"  class="btn btn-success">enter</button>
+    <button type="reset" class="btn btn-danger"> cancelar</button> 
+   </div>
+</form>
+  
+
+ 
+
+ <div *ngIf="mercancia"> 
+    <table class="table table-hover table-responsive-sm table-bordered" >
+        <thead>
+          <tr>
+              <th scope="col">ID</th>
+              <th scope="col">Mercancia</th>
+              <th scope="col">Cantidad Intacta</th>
+              <th scope="col">Cliente</th>
+              <th scope="col">ID Cliente</th>
+          </tr>
+        </thead>
+        <tbody>
+            <tr >
+            <th scope="row-md-3">{{mercancia._id}} </th>
+            <td>{{mercancia.nombre}}</td>
+            <td> {{mercancia.cantidad_buen_estado}} </td>
+            <td>{{mercancia.responsable}}</td>
+            <td>{{mercancia.id_cliente}}</td>
+            <td>
+              <a role="button" class="btn btn-sm" (click)="edit(mercancia)" >
+                <i class="material-icons" style="color: blue;">edit</i>
+                </a>
+              <a role="button" class="btn  btn-sm" >
+                  <i class="material-icons" style="color: rgba(255, 30, 0, 0.829);">delete</i>
+              </a>
+              
+            </td>
+            
+          </tr>
+                   
+        </tbody>
+        
+      </table>
+      <form #formulario=ngForm (ngSubmit)="editarMercancia(formulario)">
+          <div class="form-row">
+              <div class="form-group col-md-4">
+                  <input type="hidden" class="form-control" name="_id"
+                  #_id="ngModel"  [(ngModel)]=o.m._id  required> <!--esto es lo que hace que funcione-->
+              </div>
+              </div>
+          <div class="form-row">
+            <div class="form-group col-md-4">
+           <label>Cantidad de Carga (KG-L)</label>
+           <input type="number" class="form-control" min="1" max="mercancia.cantidad_buen_estado"  name="cantidad_buen_estado" #cantidad_buen_estado="ngModel" 
+           [(ngModel)]=o.m.cantidad_buen_estado placeholder="Cantidad buen estado" required> 
+           </div>
+          </div>
+       <div class="form-action-row" >
+        <button type="submit" class="btn btn-success">enter</button>
+        <button type="reset" class="btn btn-danger"> cancelar</button> 
+       </div>
+      </form>
+
+     
+ </div>
+ 
+
+
+   
+</div>

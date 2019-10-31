@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { AngularFireAuth } from '@angular/fire/auth';
-import { auth } from 'firebase/app';
+
+//import { AngularFireAuth } from '@angular/fire/auth';
+//import { auth } from 'firebase/app';
 
 import { from } from 'rxjs';
 import { Router } from '@angular/router';
@@ -10,15 +11,15 @@ import { Router } from '@angular/router';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-constructor(public af: AngularFireAuth,
+constructor(//public af: AngularFireAuth,
             private r:Router){
 	
 } 
-    title = 'Login';
-
+    title = 'SGLAM';
+/*
     login() {
     this.af.auth.signInWithPopup(new auth.GoogleAuthProvider());
-  }
+  }*/
 
   salida(){
   this.r.navigate(['/salida']);
@@ -32,7 +33,7 @@ constructor(public af: AngularFireAuth,
   consulta(){
     this.r.navigate(['/consulta']);
   }
-  logout() {
+ /* logout() {
     this.af.auth.signOut();
-  }
+  }*/
 }
