@@ -1,5 +1,6 @@
+<br>
 <div class="container-fluid"> 
-  
+    <div class="shadow-lg p-3 mb-5 bg-light rounded">
 <form #formulario=ngForm (ngSubmit)="getMercancia(formulario)">
 <div class="form-row">
 <div class="form-group col-md-4">
@@ -51,10 +52,28 @@
       </table>
       <form #formulario=ngForm (ngSubmit)="editarMercancia(formulario)">
           <div class="form-row">
+             
               <div class="form-group col-md-4">
-                  <input type="hidden" class="form-control" name="_id"
-                  #_id="ngModel"  [(ngModel)]=o.m._id  required> <!--esto es lo que hace que funcione-->
-              </div>
+                <input type="text" class="form-control" name="responsable"
+                #responsable="ngModel"  [(ngModel)]=o.m.responsable placeholder="Solicitante"  required> <!--esto es lo que hace que funcione-->
+            </div>
+            <div class="form-group col-md-4">
+              <input type="text" class="form-control" name="id_cliente"
+              #id_cliente="ngModel"  [(ngModel)]=o.m.id_cliente placeholder="ID de cliente" required> <!--esto es lo que hace que funcione-->
+          </div>
+          <div class="form-group col-md-4">
+            <input type="text" class="form-control" name="telefono"
+            #telefono="ngModel"  [(ngModel)]=o.m.telefono placeholder="Telefono Cliente"  required> <!--esto es lo que hace que funcione-->
+        </div>
+        <div class="form-group col-md-4">
+          <input type="email" class="form-control" name="mail" placeholder="E-mail Cliente"
+          #mail="ngModel"  [(ngModel)]=o.m.mail  required> <!--esto es lo que hace que funcione-->
+          <div class="form-group col-md-4">
+            <input type="hidden" class="form-control" name="_id"
+            #_id="ngModel"  [(ngModel)]=o.m._id  required> <!--esto es lo que hace que funcione-->
+        </div>
+         
+      </div>
               </div>
           <div class="form-row">
             <div class="form-group col-md-4">
@@ -62,6 +81,11 @@
            <input type="number" class="form-control" min="1" max="mercancia.cantidad_buen_estado"  name="cantidad_buen_estado" #cantidad_buen_estado="ngModel" 
            [(ngModel)]=o.m.cantidad_buen_estado placeholder="Cantidad buen estado" required> 
            </div>
+           <div class="form-group col-md-4">
+            <label>Fecha de salida</label>
+            <input type="date" class="form-control" name="f_salida" #f_salida="ngModel" 
+            [(ngModel)]=o.m.f_salida placeholder="Salida" required> 
+            </div>
           </div>
        <div class="form-action-row" >
         <button type="submit" class="btn btn-success">enter</button>
@@ -74,5 +98,5 @@
  
 
 
-   
+   </div>
 </div>

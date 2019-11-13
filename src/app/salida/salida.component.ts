@@ -35,13 +35,13 @@ export class SalidaComponent implements OnInit {
   }
   edit(mercancia: Mercancia){
 this.o.m=mercancia;
- 
+  
 console.log(this.o.m);
   }
   editarMercancia( formulario?:NgForm ){
     if(formulario.value._id){  
     this.o.editarMerca(formulario.value).subscribe(res=>{
-       
+        
       console.log(formulario.value);
       console.log(res);
         formulario.reset();
@@ -61,7 +61,7 @@ console.log(this.o.m);
     }
 
 mercancia:Mercancia;
- 
+  
  
 
 }

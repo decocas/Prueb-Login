@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Posicion } from '../clases/posicion';
 import { Mercancia } from '../clases/mercancia';
+ 
 
 @Injectable({
   providedIn: 'root'
@@ -8,6 +9,7 @@ import { Mercancia } from '../clases/mercancia';
 export class BodegaService {
   lista_posicion:Posicion[];
   lista_mercancia:Mercancia[];
+   
 
   constructor() { 
     this.lista_posicion=[

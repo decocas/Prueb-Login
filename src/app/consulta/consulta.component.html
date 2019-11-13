@@ -1,6 +1,9 @@
-
+<br>
 <div class="container-fluid">
-<table class="table table-hover table-responsive-lg table-bordered">
+          <div class="table-responsive-xl">
+              <div class="row d-flex justify-content-center">
+         <table class="table table-hover table-bordered"  >
+            <div class="shadow-xl p-3 mb-10 bg-light rounded">
   <thead>
     <tr  class="table-active">
       <th scope="col">ID</th>
@@ -9,13 +12,14 @@
       <th scope="col">Cantidad averiada</th>
       <th scope="col">Cantidad Intacta</th>
       <th scope="col">Fecha Entrada</th>
+      <th scope="col">Fecha Salida</th>
       <th scope="col">Fecha Caducidad</th>
       <th scope="col">Cliente</th>
       <th scope="col">ID Cliente</th>
       <th scope="col">Telefono</th>
       <th scope="col"> E-mail</th>
       <th scope="col">Serial</th>
-
+      <th scope="col">Cliente salida</th>
 
 
 
@@ -29,18 +33,22 @@
       <td>{{a.cantidad_mal_estado}}</td>
       <td>{{a.cantidad_buen_estado}}</td>  
       <td>{{a.f_entrada}}</td>
+      <td>{{a.f_salida}}</td>
       <td>{{a.fecha_caducidad}}</td>
       <td>{{a.responsable}}</td>
       <td>{{a.id_cliente}}</td> 
       <td>{{a.telefono}}</td>
       <td>{{a.mail}}</td>
-      <td>{{a.serial_container}}</td>  
+      <td>{{a.serial_container}}</td>
+      <td>{{a.responsable}}</td>    
 
        </tr>
     </tbody>
-</table>
-
+  </div>
+    </table>
 </div>
+</div>
+ </div>
 <footer>
   <div class="container">
       <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#colapse" aria-expanded="false" aria-controls="colapse" > ver Bodega

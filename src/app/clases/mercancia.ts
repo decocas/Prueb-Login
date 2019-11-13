@@ -1,6 +1,6 @@
 export class Mercancia {
     constructor(id='', nombre='', tipo_mercancia='', cantidad_mal_estado='', cantidad_buen_estado='',
-      f_entrada='', fecha_caducidad='', responsable='', id_client='', telefono='', mail='', serial_container=''){
+      f_entrada='', fecha_caducidad='', responsable='', id_client='', telefono='', mail='', serial_container='',f_salida=''){
           this._id=id;
           this.nombre=nombre; 
           this.tipo_mercancia=tipo_mercancia;
@@ -13,6 +13,7 @@ export class Mercancia {
           this.telefono=telefono;
           this.mail=mail;
           this.serial_container=serial_container;
+          this.f_salida=f_salida;
     }
     _id:string;
     nombre:string;
@@ -26,5 +27,6 @@ export class Mercancia {
     telefono:string;
     mail:string;
     serial_container:string;
+    f_salida:string;
 
 }

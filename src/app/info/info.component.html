@@ -1,1 +1,49 @@
- 
+<br>
+
+<div class="container-fluid"> 
+    <div class="shadow-lg p-3 mb-5 bg-light rounded">
+    <form #formulario=ngForm (ngSubmit)="getMercancia(formulario)">
+    <div class="form-row">
+    <div class="form-group col-md-4">
+        <input type="text" class="form-control" name="_id"
+        #_id="ngModel"  [(ngModel)]=o.m._id placeholder="buscar por ID" required>
+    </div>
+    </div>
+    <div class="form-action-row" >
+        <button type="submit"  class="btn btn-success">enter</button>
+        <button type="reset" class="btn btn-danger"> cancelar</button> 
+       </div>
+    </form>
+      
+     <div *ngIf="mercancia"> 
+        <table class="table table-hover table-responsive-sm table-bordered" >
+            <thead>
+              <tr>
+                  <th scope="col">ID</th>
+                  <th scope="col">Mercancia</th>
+                  <th scope="col">Cantidad Almacenada</th>
+                  <th scope="col">Cliente</th>
+                  <th scope="col">ID Cliente</th>
+                  <th scope="col">Fecha salida</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr >
+                <th scope="row-md-3">{{mercancia._id}} </th>
+                <td>{{mercancia.nombre}}</td>
+                <td> {{mercancia.cantidad_buen_estado}} </td>
+                <td>{{mercancia.salida.responsable}}</td>
+                <td>{{mercancia.salida.id_cliente}}</td>
+                <td>{{mercancia.salida.f_salida}}</td>
+                 
+                
+              </tr>
+                       
+            </tbody>
+            
+          </table>
+     </div>
+    </div>
+    </div>
+
+     
