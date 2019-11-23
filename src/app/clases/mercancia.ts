@@ -29,4 +29,7 @@ export class Mercancia {
     serial_container:string;
     f_salida:string;
 
+
+
+     
 }

@@ -46,4 +46,37 @@
     </div>
     </div>
 
-     
+    <footer>
+      <div >
+        <table class="table table-hover table-responsive-sm table-bordered" >
+          <thead>
+            <tr>
+                <th scope="col">f_salida</th>
+                <th scope="col">_id</th>
+                <th scope="col">cantidad_buen_estado</th>
+                <th scope="col">telefono</th>
+                <th scope="col">mail</th>
+                <th scope="col">id_cliente</th>
+                <th scope="col">responsable</th>
+            </tr>
+          </thead>
+          <tbody *ngFor="let a of b.arreglo" > 
+              <tr *ngIf="mercancia._id==a._id">
+              
+              <td>{{a.f_salida}}</td>
+              <td>{{a._id}}</td>
+              <td>{{a.cantidad_buen_estado }}</td>
+              <td>{{a.telefono}}</td>
+              <td>{{a.mail}}</td>
+              <td>{{a.id_cliente}}</td>
+              <td>{{a.responsable}}</td>
+              
+            </tr>
+                     
+          </tbody>
+          
+        </table>
+        
+    
+      </div>
+    </footer>

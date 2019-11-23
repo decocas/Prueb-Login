@@ -9,7 +9,8 @@ import { Mercancia } from '../clases/mercancia';
 export class BodegaService {
   lista_posicion:Posicion[];
   lista_mercancia:Mercancia[];
-   
+  arreglo=[];
+  model:any={};
 
   constructor() { 
     this.lista_posicion=[
