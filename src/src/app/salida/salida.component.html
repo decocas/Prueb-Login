@@ -1,0 +1,18 @@
+<div class="container-fluid">
+<form #formulario=ngForm (ngSubmit)="getMercancia(formulario)">
+<div class="form-row">
+<div class="form-group col-md-6">
+    <input type="text" class="form-control" name="_id"
+    #_id="ngModel"  [(ngModel)]=o.m._id placeholder="ID" required>
+</div>
+</div>
+<div class="form-action-row" >
+    <button type="submit" class="btn btn-success">enter</button>
+    <button type="reset" class="btn btn-danger"> cancelar</button> 
+   </div>
+</form>
+<div>
+  {{o.m.nombre}}
+</div>
+
+</div>

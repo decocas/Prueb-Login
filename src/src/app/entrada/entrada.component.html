@@ -1,0 +1,86 @@
+ <div class="container-fluid" >
+   <form #formulario=ngForm (ngSubmit)="crearMerca(formulario)">
+     <div class="form-row"> <!--MERCANCIA-->
+        <div class="form-group col-md-6">
+          <label>Id Mercancia</label>
+          <input type="text" class="form-control" name="_id"
+           #_id="ngModel"  [(ngModel)]=o.m._id placeholder="ID" required>
+        </div>
+        <div class="form-group col-md-6">
+            <label>Nombre</label>
+            <input type="text" class="form-control" name="nombre" 
+            #nombre="ngModel" [(ngModel)]=o.m.nombre placeholder="Nombre" required>          
+        </div>
+      </div>
+      <div class="form-group col-md-5">
+        <label>Tipo Mercancia</label>
+        <input type="text" class="form-control" name="tipo_mercancia" 
+        #tipo_mercancia="ngModel" [(ngModel)]=o.m.tipo_mercancia placeholder="Tipo de mercancia" required>
+      </div>
+        <div class="form-group"> <!--MERCANCIA-->
+            <div class="form-check">
+          <input type="checkbox" class="form-check-input" data-toggle="collapse" data-target="#cantidad_averiada">
+          <label class="form-check-label">Carga Averiada</label>
+          </div>       <!--TRUCO COLAPSE-->
+          <div class="collapse" id="cantidad_averiada">
+              <label>cantidad(KG-L)</label>
+            <input class="form-group" type="number" name="cantidad_mal_estado" #cantidad_mal_estado="ngModel"
+            [(ngModel)]=o.m.cantidad_mal_estado placeholder="averiada">
+             </div>
+          <div class="form-row">
+              <div class="form-group col-md-6">
+             <label>Cantidad de Carga (KG-L)</label>
+             <input type="number" class="form-control" name="cantidad_buen_estado" #cantidad_buen_estado="ngModel" 
+             [(ngModel)]=o.m.cantidad_buen_estado placeholder="Cantidad buen estado" required> 
+         </div>
+         <div class="form-group col-md-6">
+            <label>Fecha Entrada</label>
+            <input type="date" class="form-control" name="f_entrada" #f_entrada="ngModel"
+            [(ngModel)]=o.m.f_entrada placeholder="fecha_entrada" required> 
+          </div>
+         </div>
+         <div class="form-check">
+            <input type="checkbox" class="form-check-input" data-toggle="collapse" data-target="#caducidad">
+            <label class="form-check-label">Fecha Caducidad</label>
+          </div>  <!--TRUCO COLAPSE-->
+          <div class="collapse" id="caducidad">
+              <label>Fecha de Caducidad</label>
+            <input class="form-group" type="date" name="fecha_caducidad" #fecha_caducidad="ngModel"
+            [(ngModel)]=o.m.fecha_caducidad placeholder="caducidad">
+             </div>
+          </div>
+      <div class="form-row"> <!--CLIENTE-->
+        <div class="form-group col-md-6">
+          <label>Nombre Cliente</label>
+          <input class="form-control" type="text" name="responsable" #responsable="ngModel"
+          [(ngModel)]=o.m.responsable placeholder="Cliente" required>         
+        </div>
+       <div class="form-group col-md-6">
+            <label>ID Cliente</label>
+            <input class="form-control" type="text" name="id_cliente"
+            #id_cliente="ngModel" [(ngModel)]=o.m.id_cliente placeholder="id_cliente" required>
+          </div>
+          <div class="form-group col-md-6">
+              <label>Telefono Cliente</label>
+              <input class="form-control" type="text" name="telefono" #telefono="ngModel"
+              [(ngModel)]=o.m.telefono placeholder="Telefono" required>
+          </div>
+          <div class="form-group col-md-6">
+              <label>E-mail Cliente</label>
+              <input class="form-control" type="mail" name="mail" #mail="ngModel"
+              [(ngModel)]=o.m.mail placeholder="E-mail" required>
+          </div>
+          <div class="form-group col-md-5">
+            <label>Serial Contenedor</label>
+            <input class="form-control" type="number" name="serial_container" #serial_container="ngModel"
+            [(ngModel)]=o.m.serial_container placeholder="Serial" required>
+        </div>
+     
+        </div>
+        <div class="form-action-row" >
+          <button type="submit" class="btn btn-success">enter</button>
+          <button type="reset" class="btn btn-danger"> cancelar</button> 
+         </div>
+          
+      </form>
+    </div>
