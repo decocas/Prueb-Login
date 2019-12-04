@@ -3,6 +3,7 @@ import { BodegaService } from '../servicios/bodega.service';
 import { OperacionesService } from '../servicios/operaciones.service';
 import { NgForm } from '@angular/forms';
 import { Mercancia } from '../clases/mercancia';
+import { saveAs } from 'file-saver';
 
 @Component({
   selector: 'app-info',
@@ -36,8 +37,22 @@ export class InfoComponent implements OnInit {
        
 
       })  ;
-     
    
   }
+  SaveDemo() {
+    let a= document.getElementsByTagName("table")
+    let file = new File([(''+a[0].innerText)], "test.xls" ,{ type: 'text/plain;charset=utf-8' });
+    saveAs(file)
+    
+  }
+
+  cancel(m:Mercancia){
+
+   m=new Mercancia();
+    
+   this.mercancia=m;
+    
+  }
+  
   mercancia:Mercancia;
 }

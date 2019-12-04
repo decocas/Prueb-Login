@@ -18,7 +18,8 @@ export class SalidaComponent implements OnInit {
   ngOnInit() {
     this.listar();
   }
-
+  mercancia:Mercancia;
+ 
   getMercancia(formulario:NgForm){
     console.log(formulario.value._id);
      
@@ -35,6 +36,7 @@ export class SalidaComponent implements OnInit {
   }
   edit(mercancia: Mercancia){
 this.o.m=mercancia;
+//this.b.model.f_salida=this.o.m.f_salida; 
   
 console.log(this.o.m);
   }
@@ -59,9 +61,15 @@ console.log(this.o.m);
         console.log(res);
       });
     }
+       
+    methodo(formulario:NgForm):void{
+      this.b.model=formulario.value;
+    this.b.arreglo.push(this.b.model);
+    this.b.model={};
+      
+    }
 
-mercancia:Mercancia;
-  
+
  
 
 }

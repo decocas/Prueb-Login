@@ -1,0 +1,51 @@
+
+<div class="container fluid">
+  <div class="shadow-lg p-3 mb-5 bg-light rounded">
+    <div class="row"> 
+          <div class="col d-flex justify-content-center">
+            <form class="form-group"   #formulario=ngForm (ngSubmit)="inicio(formulario)">
+                <h3 class="text-primary">Inicia sesión</h3>
+              <div class="row">
+                <div class="col-sm-6">
+                  <label for="Usuario"><h5 class="d-flex text-justify-center">Usuario</h5></label>
+                  <input type="mail"  ngModel name="mail"class="form-control" placeholder="@mail usuario">
+                </div>
+                <div class="col-sm-6">
+                    <label for="clave"><h5 class="d-flex text-justify-center"clave>Clave</h5></label>
+                  <input type="password"  ngModel name="password"class="form-control" placeholder="password">
+                </div>
+               <div class="col-sm-3">
+                  <label for="Entrar"><h5 class="d-flex text-justify-center"clave>Entrar</h5></label>
+                  <button  type="submit" class="btn btn-sm" data-toggle="tooltip" data-placement="top" title="Entrar"> 
+                      <i class="material-icons  md-52" 
+                      style="font-size:38px; color:rgb(3, 3, 3);">done</i>
+                   </button>
+               </div>
+               <div class="col-sm-3">
+                  <label for="Cancelar"><h5 class="d-flex text-justify-center"clave>Cancelar</h5></label>
+                  <button  type="reset" class="btn btn-sm" data-toggle="tooltip" data-placement="top" title="Cancelar">  
+                      <i class="material-icons  md-52" 
+                      style="font-size:38px; color:rgb(3, 3, 3);">clear</i>
+                   </button>
+               </div>
+                 <!-- 
+                
+                     <div class="col-sm-6">                    
+                  <button  type="submit" class="btn" (click)="login()"> 
+                      <i class="material-icons  md-52" 
+                      style="font-size:38px; color:rgb(3, 3, 3);">account_circle</i>
+                  </button>
+                  <label for="clave"><h5 class="d-flex text-justify-center"clave>entra con google</h5></label>
+                </div>
+
+              -->
+               
+                
+              </div>
+            </form>   
+           
+        </div>
+     </div>
+    </div>
+  </div>
+ 

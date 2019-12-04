@@ -1,5 +1,6 @@
 <br>
-
+ 
+  
 <div class="container-fluid"> 
     <div class="shadow-lg p-3 mb-5 bg-light rounded">
     <form #formulario=ngForm (ngSubmit)="getMercancia(formulario)">
@@ -36,14 +37,62 @@
                 <td>{{mercancia.salida.id_cliente}}</td>
                 <td>{{mercancia.salida.f_salida}}</td>
                  
+                <td>
+                  <a id="boton" role="button" class="btn btn-sm"  (click)="SaveDemo()"  >
+                    <i class="material-icons" style="color: rgba(16, 148, 16, 0.521);">save</i>
+                    </a>
+                    <a id="boton" role="button" class="btn btn-sm"  (click)="cancel(mercancia)"  >
+                      <i class="material-icons" style="color: red;">clear</i>
+                      </a>
+                </td>
                 
               </tr>
                        
             </tbody>
             
           </table>
+          
      </div>
+    
     </div>
+    
     </div>
-
      
+   
+<!--
+ <footer>
+      <div >
+        <table class="table table-hover table-responsive-sm table-bordered" >
+          <thead>
+            <tr>
+                <th scope="col">f_salida</th>
+                <th scope="col">_id</th>
+                <th scope="col">cantidad_buen_estado</th>
+                <th scope="col">telefono</th>
+                <th scope="col">mail</th>
+                <th scope="col">id_cliente</th>
+                <th scope="col">responsable</th>
+            </tr>
+          </thead>
+          <tbody *ngFor="let a of b.arreglo" > 
+              <tr *ngIf="mercancia._id==a._id">
+              
+              <td>{{a.f_salida}}</td>
+              <td>{{a._id}}</td>
+              <td>{{a.cantidad_buen_estado }}</td>
+              <td>{{a.telefono}}</td>
+              <td>{{a.mail}}</td>
+              <td>{{a.id_cliente}}</td>
+              <td>{{a.responsable}}</td>
+              
+            </tr>
+                     
+          </tbody>
+          
+        </table>
+        
+    
+      </div>
+    </footer>
+-->
+   
