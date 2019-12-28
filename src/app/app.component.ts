@@ -5,6 +5,7 @@ import { Component } from '@angular/core';
 
 import { from } from 'rxjs';
 import { Router } from '@angular/router';
+import { LogService } from './servicios/log.service';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -12,7 +13,7 @@ import { Router } from '@angular/router';
 })
 export class AppComponent {
 constructor(//public af: AngularFireAuth,
-            private r:Router){
+            private r:Router, private l:LogService){
 	
 } 
     title = 'SGLAM';

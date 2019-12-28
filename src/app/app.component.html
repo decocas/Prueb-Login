@@ -1,9 +1,10 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align: right"> <a class="btn btn-danger">salir</a></div> 
-
- 
-
-
+ <header style="align-items: stretch;" >
+   <app-navbar></app-navbar>
+ </header>
+ <br>
+ <br>
+ <br>
+ <br>
 <div style="text-align:center">
   <h1>
    Bienvenido a SGLAM
@@ -18,7 +19,7 @@
         <div class="card bg-primary">
           <div class="card-body text-center">  <!--primera card-->
             <button type="button" class="btn" routerlink="entrada" routerLinkActive="active"  data-toggle="tooltip" data-placement="top" title="registrar"(click)="entrada()">
-              <i class="material-icons md-52" style="font-size:38px; color:white;">create_new_folder</i>
+              <i class="material-icons md-52" style="font-size:38px; color:white;">add_box</i>
             </button>
             <p class="card-text text-white"align="justify">Registrar ingreso de mercancia a la bodega de 
                 Expreso Andina sede Cartagena.</p>
@@ -46,7 +47,7 @@
         <div class="card bg-primary">
           <div class="card-body text-center">
             <button type="button" class="btn" routerlink="info" data-toggle="tooltip" data-placement="top" title="generar"  (click)="info()">
-              <i class="material-icons md-52" style="font-size:38px; color:white;">local_printshop</i>
+              <i class="material-icons md-52" style="font-size:38px; color:white;">archive</i>
             </button>
             <p class="card-text text-white"align="justify">Generar informe detallado sobre almacenamiento de mercancias.</p>
           </div>

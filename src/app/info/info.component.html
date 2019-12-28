@@ -1,5 +1,6 @@
 <br>
-
+ 
+  
 <div class="container-fluid"> 
     <div class="shadow-lg p-3 mb-5 bg-light rounded">
     <form #formulario=ngForm (ngSubmit)="getMercancia(formulario)">
@@ -9,10 +10,26 @@
         #_id="ngModel"  [(ngModel)]=o.m._id placeholder="buscar por ID" required>
     </div>
     </div>
-    <div class="form-action-row" >
+    <div class="form-action-row" *ngIf="!mercancia" >
         <button type="submit"  class="btn btn-success">enter</button>
         <button type="reset" class="btn btn-danger"> cancelar</button> 
        </div>
+       <div class="row-sm-4" *ngIf="alerta1">
+        <div class="col-sm-4 alert alert-success alert-dismissible fade show" role="alert">  <!--exito-->
+          <strong> {{alerta0}} </strong>
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close" (click)=" resetAlerta()">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+      </div>
+      <div class="row-sm-4" *ngIf="alerta2">
+          <div class="col-sm-4 alert alert-danger alert-dismissible fade show" role="alert">
+            <strong> {{alerta0}} </strong>                              <!--Fallo-->
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close" (click)=" resetAlerta()">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+        </div>
     </form>
       
      <div *ngIf="mercancia"> 
@@ -22,9 +39,7 @@
                   <th scope="col">ID</th>
                   <th scope="col">Mercancia</th>
                   <th scope="col">Cantidad Almacenada</th>
-                  <th scope="col">Cliente</th>
-                  <th scope="col">ID Cliente</th>
-                  <th scope="col">Fecha salida</th>
+                 
               </tr>
             </thead>
             <tbody>
@@ -32,18 +47,81 @@
                 <th scope="row-md-3">{{mercancia._id}} </th>
                 <td>{{mercancia.nombre}}</td>
                 <td> {{mercancia.cantidad_buen_estado}} </td>
-                <td>{{mercancia.salida.responsable}}</td>
-                <td>{{mercancia.salida.id_cliente}}</td>
-                <td>{{mercancia.salida.f_salida}}</td>
+                
+                <td >
+                  <tr>  <th scope="col">ID Salida</th>
+                        <th scope="col">Cliente</th>
+                        <th scope="col">ID Cliente</th>
+                        <th scope="col">Fecha salida</th>
+                      </tr> 
+                  <tr *ngFor="let a of mercancia.salida"  >
+                       
+                            <td  >{{a._id}} </td>
+                            <td>{{a.responsable}}</td>
+                         <td>{{a.id_cliente}}</td>
+                        <td>{{a.f_salida}}</td>
+                      
+                     
+                </tr>            
+                </td>  
                  
+                <td>
+                  <a id="boton" role="button" class="btn btn-sm"  (click)="SaveDemo()"  >
+                    <i class="material-icons" style="color: rgba(16, 148, 16, 0.521);">save</i>
+                    </a>
+                    <a id="boton" role="button" class="btn btn-sm"  (click)="cancel(mercancia)"  >
+                      <i class="material-icons" style="color: red;">clear</i>
+                      </a>
+                </td>
+
                 
               </tr>
                        
             </tbody>
             
           </table>
+          
      </div>
+    
     </div>
+    
     </div>
-
      
+   
+<!--
+ <footer>
+      <div >
+        <table class="table table-hover table-responsive-sm table-bordered" >
+          <thead>
+            <tr>
+                <th scope="col">f_salida</th>
+                <th scope="col">_id</th>
+                <th scope="col">cantidad_buen_estado</th>
+                <th scope="col">telefono</th>
+                <th scope="col">mail</th>
+                <th scope="col">id_cliente</th>
+                <th scope="col">responsable</th>
+            </tr>
+          </thead>
+          <tbody *ngFor="let a of b.arreglo" > 
+              <tr *ngIf="mercancia._id==a._id">
+              
+              <td>{{a.f_salida}}</td>
+              <td>{{a._id}}</td>
+              <td>{{a.cantidad_buen_estado }}</td>
+              <td>{{a.telefono}}</td>
+              <td>{{a.mail}}</td>
+              <td>{{a.id_cliente}}</td>
+              <td>{{a.responsable}}</td>
+              
+            </tr>
+                     
+          </tbody>
+          
+        </table>
+        
+    
+      </div>
+    </footer>
+-->
+   

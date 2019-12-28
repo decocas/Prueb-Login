@@ -37,7 +37,5 @@ export class ConsultaComponent implements OnInit {
   abrir(a:Posicion):void{
     this.posi=a;
            }
- 
-        
-
+  
 }

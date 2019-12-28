@@ -11,36 +11,36 @@
       <th scope="col">Tipo</th>
       <th scope="col">Cantidad averiada</th>
       <th scope="col">Cantidad Intacta</th>
-      <th scope="col">Fecha Entrada</th>
-      <th scope="col">Fecha Salida</th>
-      <th scope="col">Fecha Caducidad</th>
+      <th scope="col">Fecha Entrada     </th>
+      <th scope="col">Fecha Caducidad  </th>
+      <th scope="col">Lote  </th>
       <th scope="col">Cliente</th>
       <th scope="col">ID Cliente</th>
       <th scope="col">Telefono</th>
       <th scope="col"> E-mail</th>
       <th scope="col">Serial</th>
-      <th scope="col">Cliente salida</th>
+      
 
 
 
     </tr>
   </thead>
   <tbody>
-    <tr  *ngFor="let a of b.lista_mercancia">
+    <tr  *ngFor="let a of b.lista_mercancia  ">
       <th scope="row-md-3">{{a._id}} </th>
       <td>{{a.nombre}}</td>
       <td>{{a.tipo_mercancia}}</td>
       <td>{{a.cantidad_mal_estado}}</td>
       <td>{{a.cantidad_buen_estado}}</td>  
-      <td>{{a.f_entrada}}</td>
-      <td>{{a.f_salida}}</td>
+      <td>{{a.f_entrada}}</td>       
       <td>{{a.fecha_caducidad}}</td>
+      <td>{{a.lote}}</td> 
       <td>{{a.responsable}}</td>
       <td>{{a.id_cliente}}</td> 
       <td>{{a.telefono}}</td>
       <td>{{a.mail}}</td>
       <td>{{a.serial_container}}</td>
-      <td>{{a.responsable}}</td>    
+      
 
        </tr>
     </tbody>
@@ -60,7 +60,8 @@
                   <a  *ngFor="let position of  b.lista_posicion" class="col-1-4" role="button" >                     
                     <div *ngIf="position.disponibilidad" [class.selected]="position===posi"
                      (click)="abrir(position)"  class="module">
-                        <h5>{{position.id_posicion}}</h5>                         
+                        <h5>{{position.id_posicion}}</h5>
+                                                
                     </div>
                   </a>                 
                 </div>
